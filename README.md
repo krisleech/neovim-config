@@ -20,3 +20,11 @@ git clone git@github.com:krisleech/neovim-config.git nvim
 Install the Plugins:
 
 Start NeoVim, `nvim` and `:PlugInstall`.
+
+## Misc
+
+To update the plugin manager:
+
+```
+curl -fLo ~/.config/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
