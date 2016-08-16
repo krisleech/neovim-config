@@ -1,16 +1,25 @@
 # NeoVIM Configuration
 
-[Install NeoVIM](https://github.com/neovim/neovim/wiki/Installing-Neovim) and
-[fzf](https://github.com/junegunn/fzf).
+* [Install NeoVIM](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+* [fzf](https://github.com/junegunn/fzf).
+* [xclip](http://linux.die.net/man/1/xclip)
 
-For MacOS:
+## Dependencies
+
+### MacOS
 
 ```
 brew install neovim/neovim/neovim
 brew install fzf
 ```
 
-Clone the configuration:
+### Linux (Debian)
+
+```
+sudo apt-get install xclip
+```
+
+## Clone the configuration
 
 ```
 cd ~/.config
@@ -20,6 +29,7 @@ git clone git@github.com:krisleech/neovim-config.git nvim
 Install the Plugins:
 
 Start NeoVim, `nvim` and `:PlugInstall`.
+
 
 ## Misc
 

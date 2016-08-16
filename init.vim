@@ -192,6 +192,9 @@ hi StatusLineNC ctermfg=Black ctermbg=Grey
 "  Mappings
 "  ---------------------------------------------------------------------------
 
+" yank to system clipboard
+vnoremap yy :w !xclip -selection clipboard<CR><CR>
+
 " Searching / moving
 nnoremap / /\v
 vnoremap / /\v
