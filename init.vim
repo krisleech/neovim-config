@@ -28,7 +28,7 @@ Plug 'airblade/vim-rooter'
 " YankRing has been responsible for slow startup in the past.
 Plug 'vim-scripts/YankRing.vim'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'zerowidth/vim-copy-as-rtf'
+" Plug 'zerowidth/vim-copy-as-rtf' "Mac only
 "
 if executable('ag')
   Plug 'epmatsw/ag.vim'
