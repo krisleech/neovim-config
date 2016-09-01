@@ -25,7 +25,6 @@ Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/ZoomWin'
 Plug 'airblade/vim-rooter'
-" YankRing has been responsible for slow startup in the past.
 Plug 'vim-scripts/YankRing.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'zerowidth/vim-copy-as-rtf' "Mac only
@@ -378,6 +377,9 @@ let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " YankRing
 let g:yankring_history_dir = '/tmp'
+" Prevent "clipboard: error: Error: target STRING not available" on startup
+" https://github.com/neovim/neovim/issues/2642
+let g:yankring_clipboard_monitor=0
 
 " Fugitive
 
