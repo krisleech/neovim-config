@@ -163,6 +163,8 @@ set tildeop
 "  Status Line
 "  ---------------------------------------------------------------------------
 
+" path
+set statusline+=%f
 " flags
 set statusline+=%m%r%h%w
 " git branch
@@ -173,8 +175,6 @@ set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
 if exists("$rvm_path")
   set statusline+=\ %{rvm#statusline()}
 end
-" path
-set statusline=%f
 " line x of y
 set statusline+=\ [line\ %l\/%L]
 
