@@ -27,6 +27,7 @@ Plug 'vim-scripts/ZoomWin'
 Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'godlygeek/tabular'
 " Plug 'zerowidth/vim-copy-as-rtf' "Mac only
 "
 if executable('ag')
@@ -43,7 +44,7 @@ endif
 " Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'scheme'] }
 
 " Rails
-Plug 'tpope/vim-rails', { 'for': 'ruby' }
+" Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-haml', { 'for': 'haml' }
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
@@ -53,7 +54,7 @@ Plug 'tpope/vim-endwise', { 'for': ['ruby', 'lua'] }
 Plug 'kana/vim-textobj-user' | Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 Plug 'lucapette/vim-ruby-doc', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
-Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby'] }
+" Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby'] }
 
 " Crystal
 Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
@@ -62,10 +63,6 @@ Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Tmux
-Plug 'benmills/vimux'
-Plug 'jgdavey/vim-turbux'
-"
 call plug#end()
 
 runtime macros/matchit.vim
@@ -391,49 +388,8 @@ nmap <leader>gc :Gcommit<CR>i
 let g:gitgutter_map_keys = 0
 
 "  ---------------------------------------------------------------------------
-"  Tmux/Rspec
-"  ---------------------------------------------------------------------------
-
-" default mappings ,t and ,T for running all specs in buffer and spec on
-" current line.
-
-let VimuxUseNearestPane = 1
-let VimuxHeight = "40"
-let VimuxOrientation = "v"
-
-if exists('$TMUX')
-
-  let g:turbux_command_prefix = 'bundle exec'
-
-  " Run all specs (writes buffer first)
-  map <leader>tt ,w:call VimuxRunCommand("clear; bundle exec rspec spec")<CR>
-
-  " Close specs pane
-  map <leader>tx :call VimuxRunCommand("clear")<CR>:call CloseVimTmuxPanes()<CR>
-
-  " Clear specs pane
-  map <leader>tc :call VimuxRunCommand("clear")<CR>
-
-  " Run shell command
-  map <leader>rc :PromptVimTmuxCommand<CR>
-endif
-
-
-"  ---------------------------------------------------------------------------
 "  Ruby/Rails
 "  ---------------------------------------------------------------------------
-
-" vim-ruby-doc
-
-let g:ruby_doc_command='open' " MacOS
-
-" Execute current buffer as ruby (Shift + r)
-" map <S-r> :w !ruby<CR>
-
-" Skip to Model, View or Controller
-map <Leader>m :Rmodel 
-map <Leader>v :Rview 
-map <Leader>c :Rcontroller 
 
 " Other files to consider Ruby
 au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
