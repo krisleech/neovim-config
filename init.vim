@@ -319,6 +319,10 @@ map <leader>rt :call VimuxRunCommand("clear;ctags --sort=yes --extra=+f --langua
 " let g:ctrlp_clear_cache_on_exit = 0
 " let g:ctrlp_cache_dir = '/tmp/ctrlp'
 
+" Tabular
+
+" align by comma
+map <leader>tc :Tabularize /,\zs<CR>
 
 " FZF (Fuzzy search)
 " https://github.com/junegunn/fzf.vim
