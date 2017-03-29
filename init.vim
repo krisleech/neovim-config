@@ -40,8 +40,18 @@ endif
 " Plug 'neovim/node-host' | Plug 'snoe/nvim-parinfer.js'
 " Plug 'kovisoft/paredit', { 'for': ['clojure', 'clojurescript', 'scheme'] }
 " Plug 'cemerick/piggieback' | Plug 'tpope/vim-fireplace'
-" Plug 'guns/vim-clojure-static' | Plug 'guns/vim-clojure-highlight'
-" Plug 'kien/rainbow_parentheses.vim', { 'for': ['clojure', 'scheme'] }
+" Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
+" Plug 'kien/rainbow_parentheses.vim'
+" Plug 'guns/vim-sexp'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'vim-scripts/paredit.vim'
+
+" Evaluate Clojure buffers on load
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 
 " Rails
 " Plug 'tpope/vim-rails', { 'for': 'ruby' }
@@ -114,6 +124,10 @@ set background=dark
 colorscheme desert-warm-256
 highlight clear SignColumn
 highlight CursorLine term=NONE cterm=NONE ctermbg=236
+
+" set the title
+set titlestring=%{substitute(getcwd(),\ $HOME,\ '~',\ '')}/
+set titlestring+=%f
 
 " make vertical split bar character a space (so not visible)
 set fillchars+=vert:\ 
@@ -390,6 +404,16 @@ nmap <leader>gc :Gcommit<CR>i
 " GitGutter
 
 let g:gitgutter_map_keys = 0
+
+" Clojure
+
+" surround form `()` in another form `()` and enter insert mode at the opening
+" of the form.
+" (:foo params) => ((:foo params))
+nmap s( ysa))a
+
+" as above but insert at the end of the form
+nmap s) ysa))%i
 
 "  ---------------------------------------------------------------------------
 "  Ruby/Rails
