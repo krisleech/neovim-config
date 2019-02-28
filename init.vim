@@ -257,7 +257,7 @@ endif
 " Ack settings: https://github.com/krisleech/vimfiles/wiki/Make-ack-ignore-files
 
 " Auto format
-map === gg=G`.
+map === gg=G`.zz
 
 " TERMINAL
 tnoremap <Esc> <C-\><C-n>
