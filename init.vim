@@ -273,9 +273,13 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-" Switch between buffers
+" Switch between buffers with tab
 noremap <tab> :bn<CR>
 noremap <S-tab> :bp<CR>
+
+" autocomplete with tab
+inoremap <tab> <c-p>
+inoremap <s-tab> <c-n>
 
 " close buffer
 nmap <leader>d :bd<CR>
