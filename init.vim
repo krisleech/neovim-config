@@ -10,7 +10,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'rainux/vim-desert-warm-256'
 
 " Files
-Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTree', 'NERDTreeToggle', 'NERDTreeMirror'] }
 
 " Plug 'kien/ctrlp.vim'
@@ -30,11 +29,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'godlygeek/tabular'
 " Plug 'zerowidth/vim-copy-as-rtf' "Mac only
 "
-if executable('ag')
-  Plug 'epmatsw/ag.vim'
-elseif executable('ack')
-  Plug 'mileszs/ack.vim'
-endif
+Plug 'mileszs/ack.vim'
 
 " " Clojure
 " Plug 'neovim/node-host' | Plug 'snoe/nvim-parinfer.js'
@@ -243,16 +238,13 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" To search in files (,a) we can use ack or ag
+" To search in files (,a) we can use ag or ack
 
+nnoremap <leader>a :Ack! 
+nnoremap <leader>aa :Ack! <cword><CR>
 if executable('ag')
-  nnoremap <leader>a :Ag! 
-  nnoremap <leader>aa :Ag! <cword><CR>
-elseif executable('ack')
-  nnoremap <leader>a :Ack! 
-  nnoremap <leader>a :Ack! <cword><CR>
-  let g:ackprg="ack -H --nocolor --nogroup --column"
-endif
+  let g:ackprg = 'ag --vimgrep'
+end
 
 " Ack settings: https://github.com/krisleech/vimfiles/wiki/Make-ack-ignore-files
 
