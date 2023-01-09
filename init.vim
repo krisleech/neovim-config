@@ -22,28 +22,38 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
 Plug 'tomtom/tcomment_vim'
-Plug 'vim-scripts/ZoomWin'
+"Plug 'vim-scripts/ZoomWin'
 Plug 'airblade/vim-rooter'
-Plug 'vim-scripts/YankRing.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'godlygeek/tabular'
+" Plug 'vim-scripts/YankRing.vim'
+"Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'godlygeek/tabular'
 " Plug 'zerowidth/vim-copy-as-rtf' "Mac only
 "
 Plug 'mileszs/ack.vim'
 
+Plug 'Quramy/tsuquyomi'
+
 " " Clojure
+Plug 'Olical/conjure'
+Plug 'tpope/vim-dispatch'
+Plug 'clojure-vim/vim-jack-in'
+" Only in Neovim:
+Plug 'radenling/vim-dispatch-neovim'
+
+" Plug 'dense-analysis/ale'
+
 " Plug 'neovim/node-host' | Plug 'snoe/nvim-parinfer.js'
 " Plug 'kovisoft/paredit', { 'for': ['clojure', 'clojurescript', 'scheme'] }
 " Plug 'cemerick/piggieback' | Plug 'tpope/vim-fireplace'
 " Plug 'tpope/vim-fireplace'
-Plug 'guns/vim-clojure-static'
-Plug 'guns/vim-clojure-highlight'
+"Plug 'guns/vim-clojure-static'
+"Plug 'guns/vim-clojure-highlight'
 " Plug 'kien/rainbow_parentheses.vim'
 " Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
-Plug 'vim-scripts/paredit.vim'
+"Plug 'tpope/vim-sexp-mappings-for-regular-people'
+"Plug 'vim-scripts/paredit.vim'
 
 " Evaluate Clojure buffers on load
 autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
@@ -62,7 +72,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
 " Plug 'Keithbsmiley/rspec.vim', { 'for': ['ruby'] }
 
 " Crystal
-Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
+"Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -135,7 +145,7 @@ autocmd BufEnter * :set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-set regexpengine=1 " use old, faster, regex engine
+set regexpengine=0
 
 "  ---------------------------------------------------------------------------
 "  Text Formatting
@@ -198,7 +208,7 @@ hi StatusLineNC ctermfg=Black ctermbg=Grey
 "  ---------------------------------------------------------------------------
 
 " yank to system clipboard
-vnoremap yy :w !xclip -selection clipboard<CR><CR>
+vnoremap yy :w !pbcopy<CR><CR>
 
 " Searching / moving
 nnoremap / /\v
@@ -284,8 +294,8 @@ nnoremap <leader><leader> <c-^>
 
 " Edit/View files relative to current directory
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>v :view %%
+" map <leader>e :edit %%
+" map <leader>v :view %%
 
 " File to ignore for autocomplete, also used by Ctrlp
 set wildignore+=*.swp,*.jpg,*.png,*.gif,*.pdf,*.bak,*.tar,*.zip,*.tgz
@@ -406,10 +416,10 @@ let g:gitgutter_map_keys = 0
 " surround form `()` in another form `()` and enter insert mode at the opening
 " of the form.
 " (:foo params) => ((:foo params))
-nmap s( ysa))a
+"nmap s( ysa))a
 
 " as above but insert at the end of the form
-nmap s) ysa))%i
+"nmap s) ysa))%i
 
 "  ---------------------------------------------------------------------------
 "  Ruby/Rails
