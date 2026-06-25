@@ -33,3 +33,22 @@
 | `,fp`      | Projects              |
 | `,ft`      | Terminal (Root Dir)   |
 | `,fT`      | Terminal (cwd)        |
+
+## Testing
+
+| Key   | Action                  |
+| ----- | ----------------------- |
+| `,tr` | Run nearest test        |
+| `,tt` | Run file tests          |
+| `,tT` | Run all test files      |
+| `,tl` | Run last test           |
+| `,ts` | Toggle test summary     |
+| `,to` | Show test output        |
+| `,tS` | Stop test               |
+
+## Commenting
+
+| Key        | Action                        |
+| ---------- | ----------------------------- |
+| `gcc`      | Toggle comment (current line) |
+| `gc`       | Toggle comment (visual)       |

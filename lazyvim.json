@@ -1,7 +1,9 @@
 {
   "extras": [
     "lazyvim.plugins.extras.editor.neo-tree",
-    "lazyvim.plugins.extras.lang.clojure"
+    "lazyvim.plugins.extras.lang.clojure",
+    "lazyvim.plugins.extras.lang.elixir",
+    "lazyvim.plugins.extras.test.core"
   ],
   "install_version": 8,
   "news": {
