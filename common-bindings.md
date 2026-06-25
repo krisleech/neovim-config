@@ -2,6 +2,19 @@
 
 `<leader>` is `,`
 
+## Buffer
+
+| Key        | Action                      |
+| ---------- | --------------------------- |
+| `,bb`      | Switch to Other Buffer      |
+| `,bd`      | Delete Buffer               |
+| `,bD`      | Delete Buffer and Window    |
+| `,bo`      | Delete Other Buffers        |
+| `[b`       | Prev Buffer                 |
+| `]b`       | Next Buffer                 |
+| `Shift+H`  | Prev Buffer                 |
+| `Shift+L`  | Next Buffer                 |
+
 ## File / Find
 
 | Key        | Action                |
