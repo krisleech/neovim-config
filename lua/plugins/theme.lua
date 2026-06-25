@@ -1,0 +1,1 @@
+/home/kris/.config/omarchy/current/theme/neovim.lua
