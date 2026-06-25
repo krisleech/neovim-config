@@ -3,7 +3,6 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>d", function() Snacks.bufdelete() end, { desc = "Delete Buffer" })
-vim.keymap.set("n", "<leader>f", function() Snacks.picker.files() end, { desc = "Find Files" })
 vim.keymap.set("n", "<leader><space>", function() Snacks.picker.lines() end, { desc = "Find in Buffer" })
 vim.keymap.set("n", "<leader><leader>", "<C-^>", { desc = "Switch to Last Buffer" })
 vim.keymap.set("n", "n", "nzz", { desc = "Next Result (centered)" })
