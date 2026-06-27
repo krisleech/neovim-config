@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(curl *)",
-      "Bash(python3 -m json.tool)"
+      "Bash(python3 -m json.tool)",
+      "Bash(git status)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Skill(update-config)"
     ]
   }
 }

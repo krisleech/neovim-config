@@ -3,6 +3,6 @@
 -- Add any additional options here
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 -- keep cursor vertically centred for all motions
 vim.opt.scrolloff = 999
