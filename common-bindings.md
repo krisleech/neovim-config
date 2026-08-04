@@ -33,6 +33,7 @@
 | `,fp`      | Projects              |
 | `,ft`      | Terminal (Root Dir)   |
 | `,fT`      | Terminal (cwd)        |
+| `,fy`      | Yank History          |
 
 ## Testing
 
@@ -45,6 +46,18 @@
 | `,ts` | Toggle test summary     |
 | `,to` | Show test output        |
 | `,tS` | Stop test               |
+
+## Yank / Paste
+
+| Key     | Action                             |
+| ------- | ----------------------------------- |
+| `y`     | Yank                                |
+| `p`     | Put after cursor                    |
+| `P`     | Put before cursor                   |
+| `gp`    | Put after selection                 |
+| `gP`    | Put before selection                |
+| `<c-n>` | Cycle forward through yank history  |
+| `<c-p>` | Cycle backward through yank history |
 
 ## Commenting
 

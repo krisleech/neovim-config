@@ -48,11 +48,13 @@
   "retro-82.nvim": { "branch": "master", "commit": "41b8c42ed0099eb43824903ef606a6b051d33505" },
   "rose-pine": { "branch": "main", "commit": "ff483051a47e27d84bdef47703538df1ed9f4a47" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
+  "telescope.nvim": { "branch": "master", "commit": "427b576c16792edad01a92b89721d923c19ad60f" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "tokyonight.nvim": { "branch": "main", "commit": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "ts-comments.nvim": { "branch": "main", "commit": "a59d6092213447450191122c9346f309161504cb" },
   "vantablack.nvim": { "branch": "main", "commit": "8a05ea96343914f1001e937b4fa7d9d44b51d221" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
-  "white.nvim": { "branch": "main", "commit": "e3c3c3cc4b943b521032299e4f9b0d84a02e06d1" }
+  "white.nvim": { "branch": "main", "commit": "e3c3c3cc4b943b521032299e4f9b0d84a02e06d1" },
+  "yanky.nvim": { "branch": "main", "commit": "dd6689fdda85f66cab7d9b1a1664625f3be0920d" }
 }
