@@ -14,6 +14,9 @@
 | `]b`       | Next Buffer                 |
 | `Shift+H`  | Prev Buffer                 |
 | `Shift+L`  | Next Buffer                 |
+| `,,`       | Switch to Last Buffer       |
+| `,d`       | Delete Buffer                |
+| `,D`       | Delete All Buffers           |
 
 ## File / Find
 
@@ -34,6 +37,12 @@
 | `,ft`      | Terminal (Root Dir)   |
 | `,fT`      | Terminal (cwd)        |
 | `,fy`      | Yank History          |
+
+## AI
+
+| Key   | Action                                           |
+| ----- | ------------------------------------------------ |
+| `,ai` | Type current file and line in an iTerm LLM session |
 
 ## Testing
 
