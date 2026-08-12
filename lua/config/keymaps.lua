@@ -17,5 +17,6 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" 
 -- vim.keymap.set("n", "<leader>ai", function()
 --   require("config.llm_reference").send_current_location()
 -- end, { desc = "Send File Location to LLM" })
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { desc = "Enter Normal Mode" })
 vim.keymap.set("n", "n", "nzz", { desc = "Next Result (centered)" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Prev Result (centered)" })
