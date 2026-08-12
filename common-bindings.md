@@ -74,3 +74,28 @@
 | ---------- | ----------------------------- |
 | `gcc`      | Toggle comment (current line) |
 | `gc`       | Toggle comment (visual)       |
+
+## LSP / Code Navigation
+
+Requires an LSP server attached to the buffer. Each key also needs the server to
+implement that method — if it doesn't, you get
+`vim.lsp: method "..." is not supported`.
+
+| Key     | Action               |
+| ------- | -------------------- |
+| `gd`    | Goto Definition      |
+| `gD`    | Goto Declaration     |
+| `gr`    | References (usages)  |
+| `gI`    | Goto Implementation  |
+| `gy`    | Goto Type Definition |
+| `K`     | Hover docs           |
+| `gK`    | Signature help       |
+| `<c-o>` | Jump back            |
+| `<c-i>` | Jump forward         |
+
+### Ruby
+
+`ruby-lsp` implements only `definition`, `references` and `hover`, so in Ruby
+buffers just `gd`, `gr` and `K` work. `gD`, `gy` and `gI` will error — Ruby has no
+declaration/definition split and no static types, so `gd` already covers
+constants, methods and `require` paths.
