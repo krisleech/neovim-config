@@ -75,6 +75,20 @@
 | `gcc`      | Toggle comment (current line) |
 | `gc`       | Toggle comment (visual)       |
 
+## Surround
+
+Each key takes the surrounding character(s) as an argument, e.g. `gsr'"` turns
+`'abc'` into `"abc"`.
+
+| Key   | Action                            |
+| ----- | --------------------------------- |
+| `gsa` | Add surrounding (normal + visual) |
+| `gsd` | Delete surrounding                |
+| `gsr` | Replace surrounding               |
+| `gsf` | Find surrounding (to the right)   |
+| `gsF` | Find surrounding (to the left)    |
+| `gsh` | Highlight surrounding             |
+
 ## LSP / Code Navigation
 
 Requires an LSP server attached to the buffer. Each key also needs the server to

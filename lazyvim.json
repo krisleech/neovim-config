@@ -1,5 +1,6 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.editor.neo-tree",
     "lazyvim.plugins.extras.lang.clojure",
     "lazyvim.plugins.extras.lang.elixir",
