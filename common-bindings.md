@@ -38,6 +38,41 @@
 | `,fT`      | Terminal (cwd)        |
 | `,fy`      | Yank History          |
 
+## Git
+
+Provided by `gitsigns.nvim` and the snacks.nvim git pickers (both LazyVim
+defaults). `,gg` and `,gG` only exist if the `lazygit` binary is installed
+(`brew install lazygit`).
+
+| Key   | Action                    |
+| ----- | ------------------------- |
+| `,gg` | Lazygit (root dir)        |
+| `,gG` | Lazygit (cwd)             |
+| `,gb` | Git blame line            |
+| `,gf` | Current file history      |
+| `,gl` | Git log (root dir)        |
+| `,gL` | Git log (cwd)             |
+| `,gB` | Git browse (open in host) |
+| `,gY` | Git browse (copy URL)     |
+
+### Hunks
+
+| Key       | Action                        |
+| --------- | ----------------------------- |
+| `]h`/`[h` | Next / prev hunk              |
+| `]H`/`[H` | Last / first hunk             |
+| `,ghs`    | Stage hunk (normal + visual)  |
+| `,ghr`    | Reset hunk (normal + visual)  |
+| `,ghu`    | Undo stage hunk               |
+| `,ghS`    | Stage buffer                  |
+| `,ghR`    | Reset buffer                  |
+| `,ghp`    | Preview hunk inline           |
+| `,ghb`    | Blame line (full)             |
+| `,ghB`    | Blame buffer                  |
+| `,ghd`    | Diff this                     |
+| `,ghD`    | Diff this against `~`         |
+| `ih`      | Hunk text object (e.g. `vih`) |
+
 ## AI
 
 | Key   | Action                                           |
