@@ -141,10 +141,41 @@ implement that method — if it doesn't, you get
 | `gK`    | Signature help       |
 | `<c-o>` | Jump back            |
 | `<c-i>` | Jump forward         |
+| `,ca`   | Code action          |
+| `,cr`   | Rename symbol        |
+| `,cR`   | Rename file          |
 
 ### Ruby
 
-`ruby-lsp` implements only `definition`, `references` and `hover`, so in Ruby
-buffers just `gd`, `gr` and `K` work. `gD`, `gy` and `gI` will error — Ruby has no
+`ruby-lsp` does not advertise `declaration`, `typeDefinition` or
+`implementation`, so `gD`, `gy` and `gI` will error in Ruby buffers. Ruby has no
 declaration/definition split and no static types, so `gd` already covers
-constants, methods and `require` paths.
+constants, methods and `require` paths. `gr` and `K` work as normal.
+
+#### Refactoring
+
+| Key   | Action                                    |
+| ----- | ----------------------------------------- |
+| `,cr` | Rename constant (classes, modules, consts) |
+| `,ca` | Extract / attribute code actions           |
+| `,sr` | Project-wide find & replace (grug-far)     |
+
+`,cr` only renames **constants** — `ruby-lsp` matches just constant nodes, so
+putting the cursor on a method name does nothing. When it does fire it updates
+every reference in the workspace and renames the defining file plus its test
+file to match, and it refuses if the new name is already taken.
+
+`,ca` offers, depending on cursor/selection:
+
+- Refactor: Extract Variable
+- Refactor: Extract Method
+- Refactor: Toggle block style (`{ }` ↔ `do end`)
+- Create `attr_reader` / `attr_writer` / `attr_accessor` (on an ivar)
+
+For **renaming a method** there is no Ruby-aware tool — dynamic dispatch makes
+it undecidable in general, which is why `ruby-lsp` limits rename to constants.
+Use `gr` to review the call sites, then `,sr` (grug-far) with a word-boundary
+pattern like `\bold_name\b` and check the preview before applying.
+
+If the project has Sorbet, `ruby-lsp` disables `rename`, `references` and
+workspace symbols entirely and defers to the type checker.
