@@ -23,3 +23,6 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Previous Buffer" 
 vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>", { desc = "Enter Normal Mode" })
 vim.keymap.set("n", "n", "nzz", { desc = "Next Result (centered)" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Prev Result (centered)" })
+vim.keymap.set("n", "<leader>cf", function()
+  require("conform").format()
+end, { desc = "Format" })
